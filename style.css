@@ -1,0 +1,114 @@
+body {
+    color: #333333;
+    text-align: left;
+    margin: 0px 0 0 50px;
+}
+
+a:link, a:visited {
+    color: #0f3299;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-family: "游明朝", "Hiragino Mincho ProN", "MS P明朝", serif;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 0 0 0 15px;
+}
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+"markdown-preview-custom-css.styles": [
+    "/Users/shosho/Desktop/style.css" 
+]
+
+.ceo-message-section {
+  display: flex;          
+  align-items: center;    
+  gap: 40px;              
+  max-width: 1000px;      
+  margin: 0 auto;         
+  padding: 40px 20px;     
+  background-color: #f9f9f9; 
+
+  /* ★ここを追加：全体を右に30pxずらす（数字はお好みで調整してください） */
+  transform: translateX(30px);
+}
+
+.ceo-image-box {
+  /* 例：右に20px、下に10pxだけズラす */
+  transform: translate(20px);
+}
+
+.ceo-text-box {
+  flex: 1;
+  
+  transform: translate(30px, 10px);
+}
+
+.multi-slider {
+    width: 100%;
+    max-width: 1200px; /* ★スライダー横幅の上限（数字を大きくすると全体の横幅が広がります） */
+    margin: 40px auto;
+    padding-bottom: 50px;
+}
+
+.multi-slider .swiper-slide img {
+    width: 100%;
+    height: 600px; /* ← 250px から 400px に変更（お好みの高さに調整してください） */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.spacer-head {
+    height: 1vh;
+}
+
+.spacer-top {
+    height: 1vh;
+}
+
+.spacer {
+    height: 1vh;
+}
+
+
+.site-header h1 {
+    color: #003366; /* 青色（アクセスボタンと同系統の濃い青） */
+    margin: 0;
+}
+
+.site-header h1:hover {
+    color: #0055a5; /* ホバー時に明るい青 */
+}
+
+/* アクセスボタンと完全に同じサイズの「お問い合わせボタン」 */
+.contact-btn {
+    display: inline-block;
+    padding: 8px 20px;          /* アクセスボタンと同じ上下左右の余白 */
+    background-color: #003366;  /* h1と同じ濃い青 */
+    color: #ffffff !important;
+    border-radius: 20px;        /* アクセスボタンと同じ角丸 */
+    font-weight: bold;
+    font-size: 0.9rem;          /* アクセスボタンと同じ文字サイズ */
+    text-decoration: none;      /* リンクの下線を消す */
+    transition: background-color 0.3s ease;
+}
+
+/* ホバー時 */
+.contact-btn:hover {
+    background-color: #0055a5;  /* h1ホバー時と同じ明るい青 */
+}

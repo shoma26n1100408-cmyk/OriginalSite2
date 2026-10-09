@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芦屋キャンパス</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        /* ページ全体の移動を滑らかにする設定 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ヘッダーの設定 */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .site-header a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ヘッダータイトルの文字色（青色） */
+        .site-header h1 {
+            color: #003366;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* ヘッダー内のアクセスボタン */
+        .header-nav .access-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #003366;
+            color: #ffffff !important;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-nav .access-btn:hover {
+            background-color: #0055a5;
+        }
+
+        /* スライダーの設定 */
+        .multi-slider {
+            width: 100%;
+            max-width: 1100px;
+            margin: 80px auto 120px auto;
+            padding-bottom: 50px;
+        }
+
+        .multi-slider .swiper-slide img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .multi-slider .swiper-button-next,
+        .multi-slider .swiper-button-prev {
+            color: #333;
+        }
+
+        /* スペーサーの指定 */
+        .spacer-head {
+            height: 10vh;
+        }
+
+        .spacer-top {
+            height: 5vh;
+        }
+
+        .spacer {
+            height: 5vh;
+        }
+
+        /* アクセスセクションの設定 */
+        .access-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .access-section h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .access-info {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #555;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .school-name {
+            font-size: 1.15em;
+            color: #000;
+        }
+
+        .map-container iframe {
+            width: 100%; 
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        /* フッターの設定 */
+        .site-footer {
+            background-color: #ffffff; 
+            color: #555555; 
+            padding: 30px 20px;
+            text-align: center; 
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea; 
+        }
+
+        .site-footer a {
+            color: #555555;         
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        
+        .site-footer a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー（アクセスボタンを追加） -->
+    <header class="site-header">
+        <a href="https://nnn.ed.jp/"><h1>N高等学校・S高等学校・R高等学校</h1></a>
+        <nav class="header-nav">
+            <a href="#access" class="access-btn">アクセス</a>
+            <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" rel="noopener noreferrer" class="contact-btn">お問い合わせ</a>
+            
+        </nav>
+    </header>
+
+    <script src="script.js"></script>
+
+        <div class="spacer-head"></div>
+
+    <div id="キャンパス名">
+        <h2>芦屋キャンパス（兵庫県）</h2>
+    </div>
+
+    <div class="spacer-top"></div>
+
+    <!-- スライダー -->
+    <div class="swiper multi-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="image/ラポルテ.jpeg" alt="画像1"></div>
+            <div class="swiper-slide"><img src="image/本校.jpg" alt="画像2"></div>
+            <div class="swiper-slide"><img src="image/キャンパス内.webp" alt="画像3"></div>
+            <div class="swiper-slide"><img src="image/キャンパス内2.webp" alt="画像4"></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.multi-slider', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true, 
+            autoplay: {
+                delay: 4000, 
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    
+    <div class="spacer"></div>
+    
+    <!-- キャンパス長メッセージ -->
+    <div class="ceo-message-section">
+        <div class="ceo-text-box">
+            <span class="ceo-title">芦屋キャンパス長・メンター</span>
+            <h2>「ネット学習で、自分に学びを」</h2>
+            <p>
+                平素は格別のご愛顧を賜り、厚く御礼申し上げます。<br>
+                当学園は「自由な学び」をモットーに、常に新しい価値の創造に挑戦し続けてまいりました。
+            </p>
+            <p>
+                変化の激しい現代社会においても、私たちは職員一丸となって、社会に必要とされるスキルを学べることを目指してまいります。<br>
+                今後とも変わらぬご指導とご鞭撻を賜りますよう、よろしくお願い申し上げます。
+            </p>
+            <p class="ceo-name">芦屋キャンパス長 山田 太郎</p>
+        </div>
+    </div>
+
+    <!-- アクセスセクション（id="access" を指定） -->
+    <div class="access-section" id="access">
+        <h3>アクセスマップ</h3>
+        
+        <div class="access-info">
+            <p class="school-name"><strong>N高等学校 芦屋キャンパス</strong></p>
+            <p>【住所】〒659-0093 兵庫県芦屋市船戸町4-1 ラポルテ本館5F</p>
+            <p>【アクセス】JR神戸線「芦屋駅」より徒歩1分</p>
+            <p>動画でご覧になりたい方はこちら→ <a href="https://www.tiktok.com/@nshighschool/video/7582892150250032405">学園公式TikTok</a></p>
+            <p>キャンパス入学をご希望の方はこちら→ <a href="https://nnn.ed.jp/form/campus/#%E8%BF%91%E7%95%BF">オープンキャンパス近畿地区</a></p>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.800867906616!2d135.30400697567538!3d34.7354134729073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f36ff0395b13%3A0x254b3bc035d89eab!2zTumrmOetieWtpuagoSDoiqblsYvjgq3jg6Pjg7Pjg5Hjgrk!5e0!3m2!1sja!2sjp!4v1790651320498!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </div>
+
+
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <p>&copy; 2026 N高等学校 芦屋キャンパス</p>
+    </footer>
+
+</body>
+</html>
